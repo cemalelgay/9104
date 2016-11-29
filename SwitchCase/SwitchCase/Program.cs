@@ -89,40 +89,70 @@ namespace SwitchCase
             #endregion
 
             #region DortIslem
-            double sayi1, sayi2;
-            char secim;
+            //double sayi1, sayi2;
+            //char secim;
 
-            Console.Write("Birinci Sayi \t: ");
-            sayi1 = Convert.ToDouble(Console.ReadLine());
+            //Console.Write("Birinci Sayi \t: ");
+            //sayi1 = Convert.ToDouble(Console.ReadLine());
 
-            Console.Write("İkinci Sayi \t: ");
-            sayi2 = Convert.ToDouble(Console.ReadLine());
+            //Console.Write("İkinci Sayi \t: ");
+            //sayi2 = Convert.ToDouble(Console.ReadLine());
 
-            bas:
-            Console.Write("İşlem Seçiniz \t: ");
-            secim = Convert.ToChar(Console.ReadLine());
+            //bas:
+            //Console.Write("İşlem Seçiniz \t: ");
+            //secim = Convert.ToChar(Console.ReadLine());
+
+            //switch (secim)
+            //{
+            //    case '+':
+            //        Console.WriteLine("Toplam \t: " + (sayi1 + sayi2));
+            //        break;
+            //    case '-':
+            //        Console.WriteLine("Fark \t: " + (sayi1 - sayi2));
+            //        break;
+            //    case '*':
+            //        Console.WriteLine("Çarpım \t: " + (sayi1 * sayi2));
+            //        break;
+            //    case '/':
+            //        Console.WriteLine("Bölüm \t: " + (sayi1 / sayi2));
+            //        break;
+
+            //    default:
+            //        Console.WriteLine("\nYanlış Bir Seçim Yaptınız \nLütfen Yeniden Seçim Yapın\n");
+            //        goto bas; // Bilin ama kullanmayin :D
+            //}
+            //Console.ReadKey();
+            #endregion
+
+            #region MusteriHizmetleri
+            Console.WriteLine("Merhaba, Lütfen yapmakistediğiniz işlemi Seçiniz...");
+            Console.WriteLine("1. Lira Yükleme\n"+
+                "2. İnternet Paketi\n"+
+                "3. Konuşma Paketi");
+
+            int secim = Convert.ToInt32(Console.ReadLine());
 
             switch (secim)
             {
-                case '+':
-                    Console.WriteLine("Toplam \t: " + (sayi1 + sayi2));
+                case 1:
+                    Console.WriteLine("Lira Yükleme Servisine Hoşgeldiniz");
                     break;
-                case '-':
-                    Console.WriteLine("Fark \t: " + (sayi1 - sayi2));
+
+                case 2:
+                    Console.WriteLine("İnternet Paketi Servisine Hoşgeldiniz");
                     break;
-                case '*':
-                    Console.WriteLine("Çarpım \t: " + (sayi1 * sayi2));
-                    break;
-                case '/':
-                    Console.WriteLine("Bölüm \t: " + (sayi1 / sayi2));
+
+                case 3:
+                    Console.WriteLine("Konuşma Paketi Servisine Hoşgeldiniz");
                     break;
 
                 default:
-                    Console.WriteLine("\nYanlış Bir Seçim Yaptınız \nLütfen Yeniden Seçim Yapın\n");
-                    goto bas; // Bilin ama kullanmayin :D
+                    Console.WriteLine("Müşteri Temsilcisine Yönlendiriliyorsunuz...");
+                    break;
             }
             Console.ReadKey();
             #endregion
+
         }
     }
 }
