@@ -87,13 +87,47 @@ namespace List
 
             //var result = numbers.FindAll(i => i > 5).Count(); // 5 den büyük tüm elemanların döner
 
-            numbers.Sort();
-            numbers.Reverse();
+            //numbers.Sort();
+            //numbers.Reverse();
 
-            foreach (var item in numbers)
+            //foreach (var item in numbers)
+            //{
+            //    Console.WriteLine("\n\t" + item);
+            //}
+
+            //List<char> alfabe = new List<char>();
+
+            //for (char i = 'a'; i <= 'z'; i++)
+            //{
+            //    alfabe.Add(i);
+            //}
+
+            //alfabe.Reverse();
+
+            ////foreach (var item in alfabe)
+            ////{
+            ////    Console.Write(item + " ");
+            ////}
+
+            //for (int i = 0; i < alfabe.Count; i++)
+            //{
+            //    Console.Write(alfabe[i] + " ");
+            //}
+
+
+            List<string> isimler = new List<string>();
+
+            isimler.Add("Hakan");
+            isimler.AddRange(new string[] { "İrfan", "Atakan", "Aytekin", "Cemal", "Merve", "Yankı" });
+
+            isimler.Sort();
+            isimler.Reverse();
+
+            foreach (var item in isimler)
             {
-                Console.WriteLine("\n\t" + item);
+                Console.WriteLine("\t" + item);
             }
+            
         }
     }
 }
