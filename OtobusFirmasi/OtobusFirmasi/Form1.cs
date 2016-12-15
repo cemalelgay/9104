@@ -93,10 +93,12 @@ namespace OtobusFirmasi
                     if (cinsiyet == "Erkek")
                     {
                         RBtnErkek.Checked = true;
+                        secilenKoltuk.BackColor = Color.Blue;
                     }
-                    else
+                    else if (cinsiyet == "Kadın")
                     {
                         RbtnKadin.Checked = true;
+                        secilenKoltuk.BackColor = Color.Pink;
                     }
                 }
             }
