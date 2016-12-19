@@ -81,6 +81,7 @@ namespace OtobusFirmasi
             LabelKoltukNo.Text = secilenKoltuk.Text;
             LabelOtobusTuru.Text = CBoxOtobusTuru.SelectedItem.ToString();
 
+            #region KayıtlıYolcuVarsaBilgileriniGetirme
             if (LabelOtobusTuru.Text == "Travego")
             {
                 string yolcu = travegoYolcularIsim[int.Parse(secilenKoltuk.Text) - 1];
@@ -121,6 +122,7 @@ namespace OtobusFirmasi
                     }
                 }
             }
+            #endregion
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -132,10 +134,10 @@ namespace OtobusFirmasi
         string[] setraYolcularIsim = new string[60];
         string[] travegoYolcularCinsiyet = new string[60];
         string[] setraYolcularCinsiyet = new string[60];
-
-
+        
         private void BtnKaydet_Click(object sender, EventArgs e)
         {
+            #region YolcuKayıt
             if (LabelOtobusTuru.Text == "Travego")
             {
                 travegoYolcularIsim[int.Parse(LabelKoltukNo.Text) - 1] = TxtYolcuIsim.Text;
@@ -170,6 +172,8 @@ namespace OtobusFirmasi
 
                 setraYolcularCinsiyet[int.Parse(LabelKoltukNo.Text) - 1] = cinsiyet;
             }
+            #endregion
+
 
             TxtYolcuIsim.Text = "";
             LabelKoltukNo.Text = "0";
