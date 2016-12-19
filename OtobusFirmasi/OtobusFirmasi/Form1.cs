@@ -37,6 +37,9 @@ namespace OtobusFirmasi
             LabelKoltukNo.Text = secilenKoltuk.Text;
             LabelOtobusTuru.Text = CBoxOtobusTuru.SelectedItem.ToString();
 
+            RBtnErkek.Checked = false;
+            RbtnKadin.Checked = false;
+
             #region KayıtlıYolcuVarsaBilgileriniGetirme
             if (LabelOtobusTuru.Text == "Travego")
             {
@@ -113,16 +116,64 @@ namespace OtobusFirmasi
                 {
                     TxtYolcuIsim.Text = yolcu;
 
-                    string cinsiyet = setraYolcularCinsiyet[int.Parse(secilenKoltuk.Text) - 1];
-
-                    if (cinsiyet == "Erkek")
+                    #region ÖncekiKoltukDurumu
+                    string oncekiVeyaSonrakiCinsiyet;
+                    int KoltukNo = int.Parse(LabelKoltukNo.Text);
+                    if (KoltukNo % 2 == 0)
                     {
-                        RBtnErkek.Checked = true;
+                        int bakilacakKoltuk = int.Parse(LabelKoltukNo.Text) - 1;
+
+                        oncekiVeyaSonrakiCinsiyet = setraYolcularCinsiyet[bakilacakKoltuk - 1];
+
+                        if (oncekiVeyaSonrakiCinsiyet == "Erkek")
+                        {
+                            RbtnKadin.Enabled = false;
+                        }
+                        else if (oncekiVeyaSonrakiCinsiyet == "Kadın")
+                        {
+                            RBtnErkek.Enabled = false;
+                        }
+                        else
+                        {
+                            RBtnErkek.Enabled = true;
+                            RbtnKadin.Enabled = true;
+                        }
                     }
                     else
                     {
-                        RbtnKadin.Checked = true;
+                        int bakilacakKoltuk = int.Parse(LabelKoltukNo.Text) + 1;
+
+                        oncekiVeyaSonrakiCinsiyet = setraYolcularCinsiyet[bakilacakKoltuk - 1];
+
+                        if (oncekiVeyaSonrakiCinsiyet == "Erkek")
+                        {
+                            RbtnKadin.Enabled = false;
+                        }
+                        else if (oncekiVeyaSonrakiCinsiyet == "Kadın")
+                        {
+                            RBtnErkek.Enabled = false;
+                        }
+                        else
+                        {
+                            RBtnErkek.Enabled = true;
+                            RbtnKadin.Enabled = true;
+                        }
                     }
+                    #endregion
+
+                    #region CinsiyeteGöreGörünümAyarlama
+                    string kendiCinsiyeti = setraYolcularCinsiyet[int.Parse(secilenKoltuk.Text) - 1];
+                    if (kendiCinsiyeti == "Erkek")
+                    {
+                        RBtnErkek.Checked = true;
+                        secilenKoltuk.BackColor = Color.Blue;
+                    }
+                    else if (kendiCinsiyeti == "Kadın")
+                    {
+                        RbtnKadin.Checked = true;
+                        secilenKoltuk.BackColor = Color.Pink;
+                    }
+                    #endregion
                 }
             }
             #endregion
@@ -145,7 +196,8 @@ namespace OtobusFirmasi
                         btn.Width = 30;
                         btn.Height = 30;
                         btn.Text = counter + ""; // counter.ToString();
-                        btn.BackColor = Color.FromArgb(135, 144, 180);
+                        //btn.BackColor = Color.FromArgb(135, 144, 180);
+                        btn.BackColor = RenkOlustur(counter, "Travego");
                         btn.Left = (btn.Width * j);
                         btn.Top = (btn.Height * i);
                         PanelTravego.Controls.Add(btn);
@@ -168,7 +220,8 @@ namespace OtobusFirmasi
                         btn.Width = 30;
                         btn.Height = 30;
                         btn.Text = counter + ""; // counter.ToString();
-                        btn.BackColor = Color.FromArgb(135, 144, 180);
+                        //btn.BackColor = Color.FromArgb(135, 144, 180);
+                        btn.BackColor = RenkOlustur(counter, "Setra");
                         btn.Left = (btn.Width * j);
                         btn.Top = (btn.Height * i);
                         PanelSetra.Controls.Add(btn);
@@ -223,9 +276,59 @@ namespace OtobusFirmasi
             }
             #endregion
 
+            PanelTravego.Controls.Clear();
+            PanelSetra.Controls.Clear();
+
+            Form1_Load(sender, e);
+
+            CBoxOtobusTuru.SelectedItem = LabelOtobusTuru.Text;
+            CBoxOtobusTuru_SelectedIndexChanged(sender, e);
+
             TxtYolcuIsim.Text = "";
             LabelKoltukNo.Text = "0";
             LabelOtobusTuru.Text = "-";
+        }
+
+        private Color RenkOlustur(int koltukNo, string otobusTuru)
+        {
+            Color color;
+
+            if (otobusTuru == "Travego")
+            {
+                string cinsiyet = travegoYolcularCinsiyet[koltukNo - 1];
+
+                if (cinsiyet == "Erkek")
+                {
+                    color = Color.Blue;
+                }
+                else if (cinsiyet == "Kadın")
+                {
+                    color = Color.Pink;
+                }
+                else
+                {
+                    color = Color.FromArgb(135, 144, 180);
+                }
+            }
+            else
+            {
+                string cinsiyet = setraYolcularCinsiyet[koltukNo - 1];
+
+                if (cinsiyet == "Erkek")
+                {
+                    color = Color.Blue;
+                }
+                else if (cinsiyet == "Kadın")
+                {
+                    color = Color.Pink;
+                }
+                else
+                {
+                    color = Color.FromArgb(135, 144, 180);
+                }
+            }
+
+            return color;
         }
     }
 }
