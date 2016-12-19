@@ -53,49 +53,50 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(86, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(621, 127);
+            this.pictureBox1.Size = new System.Drawing.Size(211, 105);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // CBoxOtobusTuru
             // 
+            this.CBoxOtobusTuru.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.CBoxOtobusTuru.FormattingEnabled = true;
             this.CBoxOtobusTuru.Items.AddRange(new object[] {
             "Travego",
             "Setra"});
-            this.CBoxOtobusTuru.Location = new System.Drawing.Point(86, 169);
+            this.CBoxOtobusTuru.Location = new System.Drawing.Point(16, 169);
             this.CBoxOtobusTuru.Name = "CBoxOtobusTuru";
-            this.CBoxOtobusTuru.Size = new System.Drawing.Size(121, 21);
+            this.CBoxOtobusTuru.Size = new System.Drawing.Size(207, 24);
             this.CBoxOtobusTuru.TabIndex = 1;
             this.CBoxOtobusTuru.SelectedIndexChanged += new System.EventHandler(this.CBoxOtobusTuru_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(83, 153);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(12, 142);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 13);
+            this.label1.Size = new System.Drawing.Size(99, 17);
             this.label1.TabIndex = 2;
             this.label1.Text = "Otobüs Türü";
             // 
             // PanelTravego
             // 
             this.PanelTravego.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.PanelTravego.Location = new System.Drawing.Point(222, 150);
+            this.PanelTravego.Location = new System.Drawing.Point(234, 12);
             this.PanelTravego.Name = "PanelTravego";
-            this.PanelTravego.Size = new System.Drawing.Size(171, 392);
+            this.PanelTravego.Size = new System.Drawing.Size(155, 365);
             this.PanelTravego.TabIndex = 3;
             // 
             // PanelSetra
             // 
             this.PanelSetra.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.PanelSetra.Location = new System.Drawing.Point(222, 150);
+            this.PanelSetra.Location = new System.Drawing.Point(234, 12);
             this.PanelSetra.Name = "PanelSetra";
-            this.PanelSetra.Size = new System.Drawing.Size(171, 392);
+            this.PanelSetra.Size = new System.Drawing.Size(155, 392);
             this.PanelSetra.TabIndex = 4;
             // 
             // GBoxMusteriBilgileri
@@ -109,9 +110,9 @@
             this.GBoxMusteriBilgileri.Controls.Add(this.TxtYolcuIsim);
             this.GBoxMusteriBilgileri.Controls.Add(this.label2);
             this.GBoxMusteriBilgileri.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.GBoxMusteriBilgileri.Location = new System.Drawing.Point(408, 150);
+            this.GBoxMusteriBilgileri.Location = new System.Drawing.Point(405, 12);
             this.GBoxMusteriBilgileri.Name = "GBoxMusteriBilgileri";
-            this.GBoxMusteriBilgileri.Size = new System.Drawing.Size(299, 201);
+            this.GBoxMusteriBilgileri.Size = new System.Drawing.Size(204, 201);
             this.GBoxMusteriBilgileri.TabIndex = 5;
             this.GBoxMusteriBilgileri.TabStop = false;
             this.GBoxMusteriBilgileri.Text = "Müşteri Bilgileri";
@@ -136,12 +137,13 @@
             // 
             // BtnKaydet
             // 
+            this.BtnKaydet.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.BtnKaydet.Location = new System.Drawing.Point(9, 160);
             this.BtnKaydet.Name = "BtnKaydet";
-            this.BtnKaydet.Size = new System.Drawing.Size(145, 35);
+            this.BtnKaydet.Size = new System.Drawing.Size(189, 35);
             this.BtnKaydet.TabIndex = 5;
             this.BtnKaydet.Text = "KAYDET";
-            this.BtnKaydet.UseVisualStyleBackColor = true;
+            this.BtnKaydet.UseVisualStyleBackColor = false;
             this.BtnKaydet.Click += new System.EventHandler(this.BtnKaydet_Click);
             // 
             // LabelOtobusTuru
@@ -170,7 +172,7 @@
             this.GBoxCinsiyet.Controls.Add(this.RBtnErkek);
             this.GBoxCinsiyet.Location = new System.Drawing.Point(9, 69);
             this.GBoxCinsiyet.Name = "GBoxCinsiyet";
-            this.GBoxCinsiyet.Size = new System.Drawing.Size(145, 48);
+            this.GBoxCinsiyet.Size = new System.Drawing.Size(189, 48);
             this.GBoxCinsiyet.TabIndex = 2;
             this.GBoxCinsiyet.TabStop = false;
             this.GBoxCinsiyet.Text = "Cinsiyet";
@@ -199,7 +201,7 @@
             // 
             this.TxtYolcuIsim.Location = new System.Drawing.Point(9, 43);
             this.TxtYolcuIsim.Name = "TxtYolcuIsim";
-            this.TxtYolcuIsim.Size = new System.Drawing.Size(145, 20);
+            this.TxtYolcuIsim.Size = new System.Drawing.Size(189, 20);
             this.TxtYolcuIsim.TabIndex = 1;
             // 
             // label2
@@ -216,10 +218,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(777, 546);
+            this.ClientSize = new System.Drawing.Size(620, 423);
+            this.Controls.Add(this.PanelTravego);
             this.Controls.Add(this.GBoxMusteriBilgileri);
             this.Controls.Add(this.PanelSetra);
-            this.Controls.Add(this.PanelTravego);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.CBoxOtobusTuru);
             this.Controls.Add(this.pictureBox1);
