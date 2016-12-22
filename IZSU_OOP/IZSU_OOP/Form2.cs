@@ -12,6 +12,7 @@ namespace IZSU_OOP
 {
     public partial class Form2 : Form
     {
+        Abone gonderilecekAbone = new Abone();
         public Form2(Abone aboneForm2)
         {
             InitializeComponent();

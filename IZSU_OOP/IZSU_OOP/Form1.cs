@@ -46,6 +46,7 @@ namespace IZSU_OOP
             }
         }
 
+        
         private void ListBoxOdenenler_DoubleClick(object sender, EventArgs e)
         {
             Abone _abone = (Abone)ListBoxOdenenler.SelectedItem;
