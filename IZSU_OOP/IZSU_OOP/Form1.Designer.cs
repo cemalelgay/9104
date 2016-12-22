@@ -31,8 +31,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.TxtAboneNo = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.ListBoxOdenecekler = new System.Windows.Forms.ListBox();
+            this.ListBoxAboneler = new System.Windows.Forms.ListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.RadioBtnKurum = new System.Windows.Forms.RadioButton();
             this.RadioBtnEv = new System.Windows.Forms.RadioButton();
             this.TxtAdSoyad = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,7 +41,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.TxtSonSayac = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.RadioBtnKurum = new System.Windows.Forms.RadioButton();
             this.ListBoxOdenenler = new System.Windows.Forms.ListBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -76,14 +76,14 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // ListBoxOdenecekler
+            // ListBoxAboneler
             // 
-            this.ListBoxOdenecekler.FormattingEnabled = true;
-            this.ListBoxOdenecekler.Location = new System.Drawing.Point(15, 221);
-            this.ListBoxOdenecekler.Name = "ListBoxOdenecekler";
-            this.ListBoxOdenecekler.Size = new System.Drawing.Size(120, 95);
-            this.ListBoxOdenecekler.TabIndex = 3;
-            this.ListBoxOdenecekler.DoubleClick += new System.EventHandler(this.ListBoxOdenecekler_DoubleClick);
+            this.ListBoxAboneler.FormattingEnabled = true;
+            this.ListBoxAboneler.Location = new System.Drawing.Point(15, 221);
+            this.ListBoxAboneler.Name = "ListBoxAboneler";
+            this.ListBoxAboneler.Size = new System.Drawing.Size(120, 95);
+            this.ListBoxAboneler.TabIndex = 3;
+            this.ListBoxAboneler.DoubleClick += new System.EventHandler(this.ListBoxAboneler_DoubleClick);
             // 
             // groupBox1
             // 
@@ -96,6 +96,17 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Abone Türü";
+            // 
+            // RadioBtnKurum
+            // 
+            this.RadioBtnKurum.AutoSize = true;
+            this.RadioBtnKurum.Location = new System.Drawing.Point(173, 22);
+            this.RadioBtnKurum.Name = "RadioBtnKurum";
+            this.RadioBtnKurum.Size = new System.Drawing.Size(72, 21);
+            this.RadioBtnKurum.TabIndex = 1;
+            this.RadioBtnKurum.TabStop = true;
+            this.RadioBtnKurum.Text = "Kurum";
+            this.RadioBtnKurum.UseVisualStyleBackColor = true;
             // 
             // RadioBtnEv
             // 
@@ -159,17 +170,6 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "Son Sayaç";
             // 
-            // RadioBtnKurum
-            // 
-            this.RadioBtnKurum.AutoSize = true;
-            this.RadioBtnKurum.Location = new System.Drawing.Point(173, 22);
-            this.RadioBtnKurum.Name = "RadioBtnKurum";
-            this.RadioBtnKurum.Size = new System.Drawing.Size(72, 21);
-            this.RadioBtnKurum.TabIndex = 1;
-            this.RadioBtnKurum.TabStop = true;
-            this.RadioBtnKurum.Text = "Kurum";
-            this.RadioBtnKurum.UseVisualStyleBackColor = true;
-            // 
             // ListBoxOdenenler
             // 
             this.ListBoxOdenenler.FormattingEnabled = true;
@@ -185,9 +185,9 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label5.Location = new System.Drawing.Point(12, 201);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(100, 17);
+            this.label5.Size = new System.Drawing.Size(73, 17);
             this.label5.TabIndex = 12;
-            this.label5.Text = "Ödenecekler";
+            this.label5.Text = "Aboneler";
             // 
             // label6
             // 
@@ -214,12 +214,13 @@
             this.Controls.Add(this.TxtAdSoyad);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.ListBoxOdenecekler);
+            this.Controls.Add(this.ListBoxAboneler);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.TxtAboneNo);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "İZSU";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -232,7 +233,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox TxtAboneNo;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ListBox ListBoxOdenecekler;
+        private System.Windows.Forms.ListBox ListBoxAboneler;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton RadioBtnKurum;
         private System.Windows.Forms.RadioButton RadioBtnEv;

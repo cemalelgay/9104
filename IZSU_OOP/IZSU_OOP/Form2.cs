@@ -18,7 +18,26 @@ namespace IZSU_OOP
             InitializeComponent();
             TxtAboneNo.Text = aboneForm2.AboneNo;
             TxtAdSoyad.Text = aboneForm2.AdSoyad;
-            TxtToplamOdeme.Text = aboneForm2.OdemeHesapla(aboneForm2.OncekiSayac, aboneForm2.SonSayac, aboneForm2.AboneTuru).ToString();
+            TxtOncekiSayac.Text = aboneForm2.OncekiSayac.ToString();
+            TxtSonSayac.Text = aboneForm2.SonSayac.ToString();
+            TxtGuncelBorc.Text = aboneForm2.GuncelBorc.ToString();
+
+            gonderilecekAbone = aboneForm2;
+        }
+
+        private void BtnOde_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Ödeme Tutarı: " + gonderilecekAbone.GuncelBorc + "\nÖdeme Yapmak İstiyor Musunu?", "Ödeme Ekranı", MessageBoxButtons.YesNo);
+
+            if (result == DialogResult.Yes)
+            {
+                gonderilecekAbone.GuncelBorc = 0;
+                Form1 frm = new Form1();
+                frm.Odenenler.Add(gonderilecekAbone);
+                frm.Show();
+            }
+            
+            
         }
     }
 }
