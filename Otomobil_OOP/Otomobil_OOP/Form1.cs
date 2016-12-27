@@ -19,18 +19,32 @@ namespace Otomobil_OOP
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            //Porsche superAraba = new Porsche();
+            //Tofas duldul = new Tofas();
+            //Honda memurArabasi = new Honda();
+
+            //MessageBox.Show(superAraba.Yazdir());
+            //MessageBox.Show(superAraba.Calistir());
+
+            //MessageBox.Show(duldul.Yazdir());
+            //MessageBox.Show(duldul.Calistir());
+
+            //MessageBox.Show(memurArabasi.Yazdir());
+            //MessageBox.Show(memurArabasi.Calistir());
+
             Porsche superAraba = new Porsche();
             Tofas duldul = new Tofas();
             Honda memurArabasi = new Honda();
 
-            MessageBox.Show(superAraba.Yazdir());
+            MessageBox.Show(superAraba.ToString());
             MessageBox.Show(superAraba.Calistir());
 
-            MessageBox.Show(duldul.Yazdir());
+            MessageBox.Show(duldul.ToString());
             MessageBox.Show(duldul.Calistir());
 
-            MessageBox.Show(memurArabasi.Yazdir());
+            MessageBox.Show(memurArabasi.ToString());
             MessageBox.Show(memurArabasi.Calistir());
+
         }
     }
 }

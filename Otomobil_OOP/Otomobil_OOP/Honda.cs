@@ -15,5 +15,10 @@ namespace Otomobil_OOP
             motorGucu = 250;
             motorHacmi = 2000;
         }
+
+        public override string Calistir()
+        {
+            return "honda hayat onda";
+        }
     }
 }
