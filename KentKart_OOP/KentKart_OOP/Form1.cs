@@ -16,6 +16,12 @@ namespace KentKart_OOP
         {
             InitializeComponent();
         }
+        public Form1(Kart yolcu)
+        {
+            InitializeComponent();
+        }
+
+        //static List<Kart> bsnb = new List<Kart>();
 
         OgrenciKart ogrenci = new OgrenciKart();
         OgretmenKart ogretmen = new OgretmenKart();
@@ -95,7 +101,9 @@ namespace KentKart_OOP
 
                 if (result == DialogResult.Yes)
                 {
-
+                    Form2 frm2 = new Form2(yolcu);
+                    frm2.Show();
+                    this.Hide();
                 }
                 else
                 {

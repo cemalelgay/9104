@@ -7,13 +7,13 @@ using System.Windows.Forms;
 
 namespace KentKart_OOP
 {
-    enum YolcuTipi
+    public enum YolcuTipi
     {
         Tam,
         Ogrenci,
         Ogretmen
     };
-    class Kart
+    public class Kart
     {
         private double _bakiye;
         public double bakiye
