@@ -19,7 +19,7 @@ namespace KentKart_OOP
 
         public override string ToString()
         {
-            return this.kartID + "\t" + this.bakiye + "\t" + this.okulAdi;
+            return this.kartID + "\t" + this.bakiye + "\t" + this.okulAdi + "\t" + this.kartTuru;
         }
     }
 }

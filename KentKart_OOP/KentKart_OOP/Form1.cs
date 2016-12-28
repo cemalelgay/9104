@@ -66,27 +66,43 @@ namespace KentKart_OOP
         {
             Kart yolcu = (Kart)LstBoxYolcular.SelectedItem;
             
-            if (yolcu.kartTuru == YolcuTipi.Ogrenci)
+            if (yolcu.kartTuru == YolcuTipi.Ogrenci && (yolcu.bakiye - 1 >= 0))
             {
                 LstBoxYolcular.Items.RemoveAt(LstBoxYolcular.SelectedIndex);
                 ogrenci = (OgrenciKart)yolcu;
                 ogrenci.Okut();
                 LstBoxYolcular.Items.Add(ogrenci);
             }
-            else if (yolcu.kartTuru == YolcuTipi.Ogretmen)
+            else if (yolcu.kartTuru == YolcuTipi.Ogretmen && (yolcu.bakiye - 2 >= 0))
             {
                 LstBoxYolcular.Items.RemoveAt(LstBoxYolcular.SelectedIndex);
                 ogretmen = (OgretmenKart)yolcu;
                 ogretmen.Okut();
                 LstBoxYolcular.Items.Add(ogretmen);
             }
-            else
+            else if (yolcu.kartTuru == YolcuTipi.Tam && (yolcu.bakiye - 3 >= 0))
             {
                 LstBoxYolcular.Items.RemoveAt(LstBoxYolcular.SelectedIndex);
                 tam = (Kart)yolcu;
                 tam.Okut();
                 LstBoxYolcular.Items.Add(tam);
             }
+            else
+            {
+                MessageBox.Show("Bakiye Yetersiz!");
+
+                DialogResult result = MessageBox.Show("Bakiye Yüklemek İster Misin?", "Bildirim Ekranı", MessageBoxButtons.YesNo);
+
+                if (result == DialogResult.Yes)
+                {
+
+                }
+                else
+                {
+
+                }
+            }
+
         }
 
         private void Temizle()

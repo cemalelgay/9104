@@ -24,7 +24,7 @@ namespace KentKart_OOP
             }
             set
             {
-                if (value <= 0)
+                if (value < 0)
                 {
                     MessageBox.Show("Bakiye Yetersiz!");
                 }
@@ -47,7 +47,7 @@ namespace KentKart_OOP
 
         public override string ToString()
         {
-            return this.kartID + "\t" + this.bakiye + "\t" + "-";
+            return this.kartID + "\t" + this.bakiye + "\t" + "-" + "\t" + this.kartTuru;
         }
     }
 }
