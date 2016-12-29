@@ -14,7 +14,8 @@ namespace IZSU_OOP
         public int SonSayac;
         public string AboneTuru;
         public double GuncelBorc;
-
+        public double ToplamOdeme;
+        public List<double> odemeList = new List<double>();
         public double OdemeHesapla(double onceki, double son, string aboneTuru)
         {
             double result = 0;
@@ -31,7 +32,7 @@ namespace IZSU_OOP
         }
         public override string ToString()
         {
-            return this.AboneNo;
+            return this.AboneNo + "\t" + this.AboneTuru;
         }
     }
 }

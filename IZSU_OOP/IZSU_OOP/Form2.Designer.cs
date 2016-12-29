@@ -39,6 +39,7 @@
             this.TxtGuncelBorc = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.BtnOde = new System.Windows.Forms.Button();
+            this.BtnGeri = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // TxtSonSayac
@@ -136,19 +137,33 @@
             this.BtnOde.BackColor = System.Drawing.Color.OrangeRed;
             this.BtnOde.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnOde.ForeColor = System.Drawing.SystemColors.Control;
-            this.BtnOde.Location = new System.Drawing.Point(16, 149);
+            this.BtnOde.Location = new System.Drawing.Point(12, 146);
             this.BtnOde.Name = "BtnOde";
-            this.BtnOde.Size = new System.Drawing.Size(262, 31);
+            this.BtnOde.Size = new System.Drawing.Size(132, 31);
             this.BtnOde.TabIndex = 21;
             this.BtnOde.Text = "ÖDE";
             this.BtnOde.UseVisualStyleBackColor = false;
             this.BtnOde.Click += new System.EventHandler(this.BtnOde_Click);
             // 
+            // BtnGeri
+            // 
+            this.BtnGeri.BackColor = System.Drawing.Color.DarkGreen;
+            this.BtnGeri.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnGeri.ForeColor = System.Drawing.SystemColors.Control;
+            this.BtnGeri.Location = new System.Drawing.Point(150, 146);
+            this.BtnGeri.Name = "BtnGeri";
+            this.BtnGeri.Size = new System.Drawing.Size(132, 31);
+            this.BtnGeri.TabIndex = 22;
+            this.BtnGeri.Text = "GERİ";
+            this.BtnGeri.UseVisualStyleBackColor = false;
+            this.BtnGeri.Click += new System.EventHandler(this.BtnGeri_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(290, 189);
+            this.ClientSize = new System.Drawing.Size(290, 183);
+            this.Controls.Add(this.BtnGeri);
             this.Controls.Add(this.BtnOde);
             this.Controls.Add(this.TxtGuncelBorc);
             this.Controls.Add(this.label5);
@@ -180,5 +195,6 @@
         private System.Windows.Forms.TextBox TxtGuncelBorc;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button BtnOde;
+        private System.Windows.Forms.Button BtnGeri;
     }
 }

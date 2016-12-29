@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.TxtAboneNo = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -44,6 +45,7 @@
             this.ListBoxOdenenler = new System.Windows.Forms.ListBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,7 +53,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(12, 7);
+            this.label1.Location = new System.Drawing.Point(12, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 17);
             this.label1.TabIndex = 0;
@@ -59,7 +61,7 @@
             // 
             // TxtAboneNo
             // 
-            this.TxtAboneNo.Location = new System.Drawing.Point(125, 4);
+            this.TxtAboneNo.Location = new System.Drawing.Point(125, 18);
             this.TxtAboneNo.Name = "TxtAboneNo";
             this.TxtAboneNo.Size = new System.Drawing.Size(156, 20);
             this.TxtAboneNo.TabIndex = 1;
@@ -68,7 +70,7 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(15, 166);
+            this.button1.Location = new System.Drawing.Point(15, 180);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(265, 32);
             this.button1.TabIndex = 2;
@@ -79,7 +81,7 @@
             // ListBoxAboneler
             // 
             this.ListBoxAboneler.FormattingEnabled = true;
-            this.ListBoxAboneler.Location = new System.Drawing.Point(15, 221);
+            this.ListBoxAboneler.Location = new System.Drawing.Point(15, 235);
             this.ListBoxAboneler.Name = "ListBoxAboneler";
             this.ListBoxAboneler.Size = new System.Drawing.Size(120, 95);
             this.ListBoxAboneler.TabIndex = 3;
@@ -90,7 +92,7 @@
             this.groupBox1.Controls.Add(this.RadioBtnKurum);
             this.groupBox1.Controls.Add(this.RadioBtnEv);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.groupBox1.Location = new System.Drawing.Point(15, 110);
+            this.groupBox1.Location = new System.Drawing.Point(15, 124);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(266, 50);
             this.groupBox1.TabIndex = 4;
@@ -121,7 +123,7 @@
             // 
             // TxtAdSoyad
             // 
-            this.TxtAdSoyad.Location = new System.Drawing.Point(125, 30);
+            this.TxtAdSoyad.Location = new System.Drawing.Point(125, 44);
             this.TxtAdSoyad.Name = "TxtAdSoyad";
             this.TxtAdSoyad.Size = new System.Drawing.Size(156, 20);
             this.TxtAdSoyad.TabIndex = 6;
@@ -130,7 +132,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(12, 33);
+            this.label2.Location = new System.Drawing.Point(12, 47);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(96, 17);
             this.label2.TabIndex = 5;
@@ -138,7 +140,7 @@
             // 
             // TxtOncekiSayac
             // 
-            this.TxtOncekiSayac.Location = new System.Drawing.Point(125, 56);
+            this.TxtOncekiSayac.Location = new System.Drawing.Point(125, 70);
             this.TxtOncekiSayac.Name = "TxtOncekiSayac";
             this.TxtOncekiSayac.Size = new System.Drawing.Size(156, 20);
             this.TxtOncekiSayac.TabIndex = 8;
@@ -147,7 +149,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(12, 59);
+            this.label3.Location = new System.Drawing.Point(12, 73);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(107, 17);
             this.label3.TabIndex = 7;
@@ -155,7 +157,7 @@
             // 
             // TxtSonSayac
             // 
-            this.TxtSonSayac.Location = new System.Drawing.Point(125, 84);
+            this.TxtSonSayac.Location = new System.Drawing.Point(125, 98);
             this.TxtSonSayac.Name = "TxtSonSayac";
             this.TxtSonSayac.Size = new System.Drawing.Size(156, 20);
             this.TxtSonSayac.TabIndex = 10;
@@ -164,7 +166,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(12, 85);
+            this.label4.Location = new System.Drawing.Point(12, 99);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(85, 17);
             this.label4.TabIndex = 9;
@@ -173,7 +175,7 @@
             // ListBoxOdenenler
             // 
             this.ListBoxOdenenler.FormattingEnabled = true;
-            this.ListBoxOdenenler.Location = new System.Drawing.Point(153, 221);
+            this.ListBoxOdenenler.Location = new System.Drawing.Point(153, 235);
             this.ListBoxOdenenler.Name = "ListBoxOdenenler";
             this.ListBoxOdenenler.Size = new System.Drawing.Size(120, 95);
             this.ListBoxOdenenler.TabIndex = 11;
@@ -183,7 +185,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(12, 201);
+            this.label5.Location = new System.Drawing.Point(12, 215);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(73, 17);
             this.label5.TabIndex = 12;
@@ -193,17 +195,29 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(150, 201);
+            this.label6.Location = new System.Drawing.Point(150, 215);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(84, 17);
             this.label6.TabIndex = 13;
             this.label6.Text = "Ödenenler";
             // 
+            // button2
+            // 
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.Location = new System.Drawing.Point(287, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(37, 31);
+            this.button2.TabIndex = 14;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(286, 330);
+            this.ClientSize = new System.Drawing.Size(331, 347);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.ListBoxOdenenler);
@@ -246,6 +260,7 @@
         private System.Windows.Forms.ListBox ListBoxOdenenler;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button2;
     }
 }
 

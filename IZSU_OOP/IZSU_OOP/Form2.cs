@@ -31,13 +31,22 @@ namespace IZSU_OOP
 
             if (result == DialogResult.Yes)
             {
+                gonderilecekAbone.ToplamOdeme += gonderilecekAbone.GuncelBorc;
+                gonderilecekAbone.odemeList.Add(gonderilecekAbone.GuncelBorc);
                 gonderilecekAbone.GuncelBorc = 0;
-                Form1 frm = new Form1();
-                frm.Odenenler.Add(gonderilecekAbone);
+                Form1 frm = new Form1(gonderilecekAbone);
                 frm.Show();
+                this.Hide();
             }
             
             
+        }
+
+        private void BtnGeri_Click(object sender, EventArgs e)
+        {
+            Form1 frm = new Form1();
+            frm.Show();
+            this.Hide();
         }
     }
 }
