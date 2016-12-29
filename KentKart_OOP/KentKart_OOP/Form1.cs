@@ -21,15 +21,20 @@ namespace KentKart_OOP
             InitializeComponent();
         }
 
-        //static List<Kart> bsnb = new List<Kart>();
+        static List<Kart> kaliciListe = new List<Kart>();
 
         OgrenciKart ogrenci = new OgrenciKart();
         OgretmenKart ogretmen = new OgretmenKart();
         Kart tam = new Kart();
+        Kart form2denGelenYolcuBakiye = new Kart();
         int kartid = 1;
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            foreach (var item in kaliciListe)
+            {
+                LstBoxYolcular.Items.Add(item);
+            }
         }
 
         private void BtnEkle_Click(object sender, EventArgs e)
@@ -42,6 +47,7 @@ namespace KentKart_OOP
                 ogrenci.okulAdi = TxtOkulAdi.Text;
                 ogrenci.kartTuru = YolcuTipi.Ogrenci;
                 LstBoxYolcular.Items.Add(ogrenci);
+                kaliciListe.Add(ogrenci);
             }
             else if (RadioBtnOgretmen.Checked == true)
             {
@@ -50,6 +56,7 @@ namespace KentKart_OOP
                 kartid++;
                 ogretmen.kartTuru = YolcuTipi.Ogretmen;
                 LstBoxYolcular.Items.Add(ogretmen);
+                kaliciListe.Add(ogretmen);
             }
             else
             {
@@ -58,6 +65,7 @@ namespace KentKart_OOP
                 kartid++;
                 tam.kartTuru = YolcuTipi.Tam;
                 LstBoxYolcular.Items.Add(tam);
+                kaliciListe.Add(tam);
             }
 
             Temizle();
