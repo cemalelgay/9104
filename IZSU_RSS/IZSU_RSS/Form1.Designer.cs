@@ -98,6 +98,7 @@
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(340, 148);
             this.listBox2.TabIndex = 4;
+            this.listBox2.DoubleClick += new System.EventHandler(this.listBox2_DoubleClick);
             // 
             // label3
             // 
@@ -118,6 +119,7 @@
             this.listBox3.Name = "listBox3";
             this.listBox3.Size = new System.Drawing.Size(340, 148);
             this.listBox3.TabIndex = 6;
+            this.listBox3.DoubleClick += new System.EventHandler(this.listBox3_DoubleClick);
             // 
             // Form1
             // 
